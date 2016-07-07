@@ -1,5 +1,6 @@
 <?php
 //print_r($_SERVER);
+/*example of mutiple memcache server*/
 $uri=$_SERVER["REQUEST_URI"];
 //user2345.html
 $uid=substr($uri,5,strpos($uri,'.')-5);
