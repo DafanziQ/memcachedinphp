@@ -1,6 +1,6 @@
 <?php
 //print_r($_SERVER);
-/*example of mutiple memcache server*/
+/*example of mutiple memcache serve with hashconsistenr*/
 $uri=$_SERVER["REQUEST_URI"];
 //user2345.html
 $uid=substr($uri,5,strpos($uri,'.')-5);
@@ -9,7 +9,7 @@ $mem=new memcache();
 $mem->addServer('127.0.0.1',11211);
 $mem->addServer('127.0.0.1',11212);
 $mem->addServer('127.0.0.1',11213);
-$conn=mysql_connect("localhost","root","wan520lw");
+$conn=mysql_connect("localhost","root","*******");
 $sql="use test";
 mysql_query($sql,$conn);
 $sql="set names utf8";
